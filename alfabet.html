@@ -1,0 +1,115 @@
+<html>
+<body>
+    <style>
+        .a-page {
+            text-align: center;
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            border-radius: 12px;
+        }
+        .vokal-besar {
+            text-align: center;
+            font-size: 16px;
+            padding: 15px 20px;
+            border: 2px solid #96e6a1;
+            background-color: white;
+            border-radius: 12px;
+        }
+        .vokal-besar:hover {
+            background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+            border: 2px solid #96e6a1;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .vokal-kecil {
+            text-align: center;
+            font-size: 16px;
+            padding: 15px 20px;
+            border: 2px solid #f68084;
+            background-color: white;
+            border-radius: 12px;
+        }
+        .vokal-kecil:hover {
+            border: 2px solid #f68084;
+            background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .konsonan {
+            text-align: center;
+            font-size: 16px;
+            padding: 15px 20px;
+            border: 2px solid #f5f7fa;
+            background-color: white;
+            border-radius: 12px;
+        }
+        .konsonan:hover {
+            border: 2px solid #f5f7fa;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .gh {
+            text-align: center;
+            font-size: 16px;
+            padding: 15px 20px;
+            border: 2px solid #fddb92;
+            background-color: white;
+            border-radius: 12px;
+        }
+        .gh:hover {
+            border: 2px solid #fddb92;
+            background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+    <div class="a-page">
+        <br><br>
+        <button class="vokal-besar" onclick="suara('a')">A a</button>
+        <button class="vokal-besar" onclick="suara('ei')">I ı</button>
+        <button class="vokal-besar" onclick="suara('o')">O o</button>
+        <button class="vokal-besar" onclick="suara('u')">U u</button>
+        <br><br>
+        <button class="vokal-kecil" onclick="suara('e')">E e</button>
+        <button class="vokal-kecil" onclick="suara('i')">İ i</button>
+        <button class="vokal-kecil" onclick="suara('oe')">Ö ö</button>
+        <button class="vokal-kecil" onclick="suara('ue')">Ü ü</button>
+        <br><br>
+        <button class="konsonan" onclick="suara('b')">B b</button>
+        <button class="konsonan" onclick="suara('c')">C c</button>
+        <button class="konsonan" onclick="suara('ch')">Ç ç</button>
+        <button class="konsonan" onclick="suara('d')">D d</button>
+        <button class="konsonan" onclick="suara('f')">F f</button>
+        <br><br>
+        <button class="konsonan" onclick="suara('g')">G g</button>
+        <button class="konsonan" onclick="suara('h')">H h</button>
+        <button class="konsonan" onclick="suara('j')">J j</button>
+        <button class="konsonan" onclick="suara('k')">K k</button>
+        <button class="konsonan" onclick="suara('l')">L l</button>
+        <br><br>
+        <button class="konsonan" onclick="suara('m')">M m</button>
+        <button class="konsonan" onclick="suara('n')">N n</button>
+        <button class="konsonan" onclick="suara('p')">P p</button>
+        <button class="konsonan" onclick="suara('r')">R r</button>
+        <button class="konsonan" onclick="suara('s')">S s</button>
+        <br><br>
+        <button class="konsonan" onclick="suara('sh')">Ş ş</button>
+        <button class="konsonan" onclick="suara('t')">T t</button>
+        <button class="konsonan" onclick="suara('v')">V v</button>
+        <button class="konsonan" onclick="suara('y')">Y y</button>
+        <button class="konsonan" onclick="suara('z')">Z z</button>
+        <br><br>
+        <button class="gh" onclick="suara('gh')">Ğ ğ</button>
+        <br><br>
+    </div>
+    <script>
+        function suara(a){
+            var audio = new Audio('/suara/'+a+'.ogg');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
